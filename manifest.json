@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "TikTok Helper",
+  "version": "1.0.0",
+  "description": "Custom TikTok browser enhancements for ad-hiding, liked video filtering, and watermark-free downloads.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.tiktok.com/*",
+    "https://www.tiktok.com"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.tiktok.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
